@@ -212,8 +212,7 @@ const Dashboard = () => {
         <StatBox
           title="Budget Satus"
           value="$4000"
-          increase="+300"
-          description="$300 under budget!"
+          description="Good Standing"
           icon={
             <PersonAdd
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}

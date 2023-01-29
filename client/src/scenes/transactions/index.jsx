@@ -12,6 +12,10 @@ import './App.css';
 const Transactions = () => {
     return(
         <GlobalProvider>
+            <h2>
+                Your Budget: $4000
+
+            </h2>
                 <h2>
       Expense Tracker
     </h2>

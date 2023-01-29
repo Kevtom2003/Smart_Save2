@@ -4,7 +4,7 @@ import Graph from "../../components/Graph";
 const Analytics = () => {
     return (    
         <div className="container">
-          <Graph/>
+          This is the analytics
         </div>
     );
 
