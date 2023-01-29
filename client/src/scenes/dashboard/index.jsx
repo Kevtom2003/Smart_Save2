@@ -140,6 +140,11 @@ const Dashboard = () => {
   const { data, isLoading } = useGetDashboardQuery();
 
   const columns = [
+    // {
+    //   id: "id",
+    //   headerName: "ID",
+    //   flex: 1,
+    // },
     {
       field: "date",
       headerName: "Date",
@@ -247,7 +252,7 @@ const Dashboard = () => {
           title="Yearly Savings"
           value={"$1034"}
           increase="+2.3%"
-          description="T"
+          description=""
           icon={
             <Traffic
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
@@ -297,7 +302,7 @@ const Dashboard = () => {
         </Box>
         <Box
           gridColumn="span 4"
-          gridRow="span 3"
+          gridRow="span 2"
           backgroundColor={theme.palette.background.alt}
           p="1.5rem"
           borderRadius="0.55rem"
