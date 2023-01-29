@@ -190,7 +190,7 @@ const Dashboard = () => {
           }
         />
         <StatBox
-          title="Top Shops"
+          title="Top Spending"
           value="Chipotle"
           increase="+47%"
           description="In the last week"
