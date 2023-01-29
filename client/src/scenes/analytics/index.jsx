@@ -43,7 +43,7 @@ const Analytics = () => {
           },
         },
         title: {
-          text: 'Price'
+          text: 'Smart Save Score'
         },
       },
       xaxis: {
@@ -66,7 +66,7 @@ const Analytics = () => {
     return (  
       <div>
         <ReactApexChart options={state.options} series={state.series} type="line" height={350}/>
-        <Box textAlign={'center'}>ML Based Stock Predictions</Box>
+        <Box textAlign={'center'}></Box>
       </div>
     );
 

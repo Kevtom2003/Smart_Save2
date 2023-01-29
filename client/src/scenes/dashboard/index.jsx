@@ -120,7 +120,7 @@ const Dashboard = () => {
           },
         },
         title: {
-          text: 'Price'
+          text: 'Smart Save Score'
         },
       },
       xaxis: {
