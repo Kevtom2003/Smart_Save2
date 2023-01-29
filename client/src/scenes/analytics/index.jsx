@@ -128,7 +128,7 @@ const Analytics = () => {
       <div>
         <ReactApexChart options={state.options} series={state.series} type="line" height={350}/>
         <Box textAlign={'center'}>Enter Smart Score</Box>
-        <Button onClick={buttonClicked}>Bad Smart Score</Button>
+        <Button font-color={'black'} onClick={buttonClicked}>Bad Smart Score</Button>
       </div>
     );
 

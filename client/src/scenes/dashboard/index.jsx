@@ -11,7 +11,9 @@ import {
   PointOfSale,
   PersonAdd,
   Traffic,
-  Analytics
+  Analytics,
+  AttachMoney,
+  CheckBox
 } from "@mui/icons-material";
 import {
   Box,
@@ -250,7 +252,7 @@ const Dashboard = () => {
           value="$4000"
           description="Good Standing"
           icon={
-            <PersonAdd
+            <CheckBox
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
             />
           }
@@ -261,7 +263,7 @@ const Dashboard = () => {
           increase="+2.3%"
           description=""
           icon={
-            <Traffic
+            <AttachMoney
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
             />
           }
