@@ -43,15 +43,15 @@ const Dashboard = () => {
   
   
   const test_rows = [
-    { id: 1, date: 'Snow', title: 'Jon', category: '35', amount: 50 },
-    { id: 2, date: 'Lannister', title: 'Cersei', category: '42', amount: 50 },
-    { id: 3, date: 'Lannister', title: 'Jaime', category: '45', amount: 50  },
-    { id: 4, date: 'Stark', title: 'Arya', category: 16, amount: 50  },
-    { id: 5, date: 'Targaryen', title: 'Daenerys', category: null, amount: 50  },
-    { id: 6, date: 'Melisandre', title: null, category: 150, amount: 50  },
-    { id: 7, date: 'Clifford', title: 'Ferrara', category: 44, amount: 50  },
-    { id: 8, date: 'Frances', title: 'Rossini', category: 36, amount: 50  },
-    { id: 9, date: 'Roxie', title: 'Harvey', category: 65, amount: 50  },
+    { id: 1, date: 'Snow', title: 'Jon', category: 'Food', amount: 1 },
+    { id: 2, date: 'Lannister', title: 'Cersei', category: 'School', amount: 1 },
+    { id: 3, date: 'Lannister', title: 'Jaime', category: 'Leisure', amount: 1  },
+    { id: 4, date: 'Stark', title: 'Arya', category: 'Leisure', amount: 1  },
+    { id: 5, date: 'Targaryen', title: 'Daenerys', category: 'Food', amount: 1  },
+    { id: 6, date: 'Melisandre', title: null, category: 'Food', amount: 1  },
+    { id: 7, date: 'Clifford', title: 'Ferrara', category: 'Tuition', amount: 1  },
+    { id: 8, date: 'Frances', title: 'Rossini', category: 'Leisure', amount: 1  },
+    { id: 9, date: 'Roxie', title: 'Harvey', category: 'Food', amount: 1  },
   ];
   
 
