@@ -181,10 +181,10 @@ const Dashboard = () => {
           <ReactApexChart options={state.options} series={state.series} type="line" height={350}/>
         </Box>
         <StatBox
-          title="Monthly Sales"
+          title="Budget Satus"
           value={data && data.thisMonthStats.totalSales}
-          increase="+5%"
-          description="Since last month"
+          increase="+300"
+          description="$300 underbudget!"
           icon={
             <PersonAdd
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
@@ -192,10 +192,10 @@ const Dashboard = () => {
           }
         />
         <StatBox
-          title="Yearly Sales"
+          title="Yearly Savings"
           value={data && data.yearlySalesTotal}
-          increase="+43%"
-          description="Since last month"
+          increase="$1007"
+          description=""
           icon={
             <Traffic
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
