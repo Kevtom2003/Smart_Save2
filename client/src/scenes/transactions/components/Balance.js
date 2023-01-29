@@ -23,6 +23,7 @@ function moneyFormatter(num) {
   );
 }
 
+
 export const Balance = () => {
   const { transactions } = useContext(GlobalContext);
 
