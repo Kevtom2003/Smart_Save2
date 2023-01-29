@@ -211,9 +211,9 @@ const Dashboard = () => {
         </Box>
         <StatBox
           title="Budget Satus"
-          value={data && data.thisMonthStats.totalSales}
+          value="$4000"
           increase="+300"
-          description="$300 underbudget!"
+          description="$300 under budget!"
           icon={
             <PersonAdd
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
@@ -222,9 +222,9 @@ const Dashboard = () => {
         />
         <StatBox
           title="Yearly Savings"
-          value={data && data.yearlySalesTotal}
-          increase="$1007"
-          description=""
+          value={"$1034"}
+          increase="+2.3%"
+          description="T"
           icon={
             <Traffic
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
