@@ -67,6 +67,11 @@ const navItems = [
     text: "Budget",
     icon: <SavingsOutlined />,
    },
+
+   {
+    text: "Deals",
+    icon: <LocalOfferOutlined />,
+   },
 //   {
 //     text: "Daily",
 //     icon: <LocalOfferOutlined />,

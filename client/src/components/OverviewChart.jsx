@@ -44,7 +44,7 @@ const OverviewChart = ({ isDashboard = false, view }) => {
     return [[totalSalesLine], [totalUnitsLine]];
   }, [data]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  if (!data || isLoading) return "Loading...";
+  if (!data || isLoading) return "Testing...";
 
   return (
     <ResponsiveLine

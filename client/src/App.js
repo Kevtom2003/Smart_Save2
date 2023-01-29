@@ -9,6 +9,7 @@ import Dashboard from "scenes/dashboard";
 import Transactions from "scenes/transactions";
 import Analytics from "scenes/analytics";
 import Budget from "scenes/budget";
+import Deals from "scenes/deals";
 
 function App() {
   const mode = useSelector((state) => state.global.mode);
@@ -25,6 +26,7 @@ function App() {
               <Route path="/transactions" element={<Transactions />} />
               <Route path="/budget" element={<Budget />} />
               <Route path="/investments" element={<Analytics/>}/>
+              <Route path="/deals" element={<Deals/>}/>
 
             </Route>
           </Routes>

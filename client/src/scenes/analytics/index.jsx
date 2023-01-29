@@ -1,7 +1,12 @@
 import React from 'react';
+import Graph from "../../components/Graph";
 
 const Analytics = () => {
-    return <div>Analytics</div>
+    return (    
+        <div className="container">
+          <Graph/>
+        </div>
+    );
 
 };
 

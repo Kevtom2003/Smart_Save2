@@ -7,6 +7,7 @@ import {
   PointOfSale,
   PersonAdd,
   Traffic,
+  Analytics
 } from "@mui/icons-material";
 import {
   Box,
@@ -90,21 +91,21 @@ const Dashboard = () => {
       >
         {/* ROW 1 */}
         <StatBox
-          title="Total Customers"
-          value={data && data.totalCustomers}
+          title="Smart Save Score"
+          value="679"
           increase="+14%"
           description="Since last month"
           icon={
-            <Email
+            <Analytics
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
             />
           }
         />
         <StatBox
-          title="Sales Today"
-          value={data && data.todayStats.totalSales}
-          increase="+21%"
-          description="Since last month"
+          title="Top Shops"
+          value="Chipotle"
+          increase="+47%"
+          description="In the last week"
           icon={
             <PointOfSale
               sx={{ color: theme.palette.secondary[300], fontSize: "26px" }}
@@ -188,7 +189,7 @@ const Dashboard = () => {
           borderRadius="0.55rem"
         >
           <Typography variant="h6" sx={{ color: theme.palette.secondary[100] }}>
-            Sales By Category
+            Expenses By Category
           </Typography>
           <BreakdownChart isDashboard={true} />
           <Typography
@@ -196,8 +197,7 @@ const Dashboard = () => {
             fontSize="0.8rem"
             sx={{ color: theme.palette.secondary[200] }}
           >
-            Breakdown of real states and information via category for revenue
-            made for this year and total sales.
+            Breakdown of your expenses by category to help you see where you are spending the most
           </Typography>
         </Box>
       </Box>
