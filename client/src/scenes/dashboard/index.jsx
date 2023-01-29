@@ -82,7 +82,7 @@ const Dashboard = () => {
         size: 0,
       },
       title: {
-        text: 'Stock Price Movement',
+        text: 'SPDR S&P 500 ETF Trust (SPY)',
         align: 'left'
       },
       
