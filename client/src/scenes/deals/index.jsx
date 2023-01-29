@@ -1,7 +1,15 @@
 import React from 'react';
+import {
+    Box,
+    Button,
+    Typography,
+    useTheme,
+    useMediaQuery,
+  } from "@mui/material";
 
 const Deals = () => {
-    return <div>Analytics</div>
+    return     ( <h2>testing</h2>
+  );
 
 };
 
