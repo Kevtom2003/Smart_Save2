@@ -1,19 +1,17 @@
-// Import express Router
-import express from 'express';
-import Expense from "./models/transactionData.js";
-import { transactionData } from "./data/index.js";
+import express from "express";
+import getTransactions from "../controllers/userData.js";
+
 const router = express.Router();
 
-// Create a route to insert the data
-router.post("/transactions", (req, res) => {
-    Expense.insertMany(transactionData)
-    .then(() => {
-        res.status(200).json({ message: 'Data inserted successfully' });
-    })
-    .catch((error) => {
-        res.status(500).json({ error });
-    });
+router.get("/transactions", async (req, res) => {
+  try {
+      console.log("Hits GET /transactions")
+      const transactions = await getTransactions(); //get all transactions
+      res.json(transactions); 
+  } catch (error) {
+    console.log('ERROR')
+      res.status(500).send(error.message);
+  }
 });
 
-// Export the router
 export default router;

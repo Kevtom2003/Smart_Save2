@@ -1,7 +1,6 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "type": "module",
   "scripts": {
@@ -24,5 +23,6 @@
     "morgan": "^1.10.0",
     "nodemon": "^2.0.20",
     "parser": "^0.1.4"
-  }
+  },
+  "description": ""
 }

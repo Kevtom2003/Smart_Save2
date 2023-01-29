@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import FlexBetween from "components/FlexBetween";
 import Header from "components/Header";
 import ReactApexChart from "react-apexcharts";
@@ -25,8 +25,21 @@ import BreakdownChart from "components/BreakdownChart";
 import OverviewChart from "components/OverviewChart";
 import { useGetDashboardQuery } from "state/api";
 import StatBox from "components/StatBox";
+import axios from "axios";
+
+// axios.defaults.proxy.host = "http://localhost"
+// axios.defaults.proxy.port = "5001"
 
 const Dashboard = () => {
+  const [tabledata, setTableData] = useState()
+
+  useEffect(() => {
+    // fetch('/transactions').then((data) => data.json()).then((data) => console.log(data)).catch((err) => console.log(err))
+    axios.get('http://localhost:5001/api').then(data => setTableData(data))
+  }, [])
+  console.log(tabledata)
+
+  
   const [state2, setState2] = useState({
     series: [44, 55, 13, 33],
     options: {
@@ -121,23 +134,23 @@ const Dashboard = () => {
   
   const columns = [
     {
-      field: "_id",
-      headerName: "ID",
+      field: "date",
+      headerName: "Date",
       flex: 1,
     },
     {
-      field: "userId",
-      headerName: "User ID",
+      field: "title",
+      headerName: "Title",
       flex: 1,
     },
     {
-      field: "createdAt",
-      headerName: "CreatedAt",
+      field: "category",
+      headerName: "Category",
       flex: 1,
     },
     {
-      field: "products",
-      headerName: "# of Products",
+      field: "amount",
+      headerName: "Amount",
       flex: 0.5,
       sortable: false,
       renderCell: (params) => params.value.length,
@@ -268,7 +281,12 @@ const Dashboard = () => {
           
           <DataGrid
             loading={isLoading || !data}
+<<<<<<< Updated upstream
             rows={(data && data.transactions) || []}
+=======
+            getRowId={(row) => row._id}
+            rows={(tabledata) || []}
+>>>>>>> Stashed changes
             columns={columns}
           />
         </Box>

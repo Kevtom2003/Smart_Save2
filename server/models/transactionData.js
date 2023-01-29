@@ -1,6 +1,6 @@
-const mongoose = require("mongoose");
+import mongoose from "mongoose";
 
-const ExpenseSchema = new mongoose.Schema({
+const TransactionSchema = new mongoose.Schema({
     date: {
         type: Date,
         required: true
@@ -19,5 +19,5 @@ const ExpenseSchema = new mongoose.Schema({
     },
 });
 
-const Expense = mongoose.model("Expense", ExpenseSchema);
-module.exports = Expense;
+const Transaction = mongoose.model("Transaction", TransactionSchema);
+export default Transaction;
