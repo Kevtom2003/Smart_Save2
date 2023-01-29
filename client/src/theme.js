@@ -17,28 +17,28 @@ export const tokensDark = {
     },
     primary: {
         // blue
-        100: "#d3d4de",
-        200: "#a6a9be",
-        300: "#7a7f9d",
-        400: "#4d547d",
-        500: "#21295c",
-        600: "#2b4234", // manually adjusted
-        700: "#141937",
-        800: "#0d1025",
-        900: "#015919",
+        100: "#d3ded5",
+        200: "#a6bea9",
+        300: "#7a9d7d",
+        400: "#4d7d52",
+        500: "#215c21",
+        600: "#2b422b", // manually adjusted
+        700: "#143714",
+        800: "#0d2510",
+        900: "#070d07",
       },
       secondary: {
         // yellow
-        50: "#e8fff1", // manually adjusted
-        100: "#e0ffeb",
-        200: "#c2ffd4",
-        300: "#a3ffb4",
-        400: "#85ff95",
-        500: "#66ff7a",
-        600: "#52cc64",
-        700: "#3d994f",
-        800: "#296639",
-        900: "#332a14",
+        50: "#eaffe8", // manually adjusted
+        100: "#e0ffe0",
+        200: "#c2ffc3",
+        300: "#a8ffa3",
+        400: "#85ff8b",
+        500: "#66ff70",
+        600: "#52cc5e",
+        700: "#3d9940",
+        800: "#296630",
+        900: "#143314",
       },
   };
   
@@ -78,11 +78,11 @@ export const tokensDark = {
               },
               neutral: {
                 ...tokensDark.grey,
-                main: tokensDark.grey[500],
+                main: tokensDark.grey[400],
               },
               background: {
-                default: tokensDark.primary[600],
-                alt: tokensDark.primary[500],
+                default: tokensDark.primary[900],
+                alt: tokensDark.primary[800],
               },
             }
           : {
@@ -108,30 +108,30 @@ export const tokensDark = {
             }),
       },
       typography: {
-        fontFamily: ["Inter", "sans-serif"].join(","),
+        fontFamily: ["Quicksand", "sans-serif"].join(","),
         fontSize: 12,
         h1: {
-          fontFamily: ["Inter", "sans-serif"].join(","),
+          fontFamily: ["Quicksand", "sans-serif"].join(","),
           fontSize: 40,
         },
         h2: {
-          fontFamily: ["Inter", "sans-serif"].join(","),
+          fontFamily: ["Quicksand", "sans-serif"].join(","),
           fontSize: 32,
         },
         h3: {
-          fontFamily: ["Inter", "sans-serif"].join(","),
+          fontFamily: ["Quicksand", "sans-serif"].join(","),
           fontSize: 24,
         },
         h4: {
-          fontFamily: ["Inter", "sans-serif"].join(","),
+          fontFamily: ["Quicksand", "sans-serif"].join(","),
           fontSize: 20,
         },
         h5: {
-          fontFamily: ["Inter", "sans-serif"].join(","),
+          fontFamily: ["Quicksand", "sans-serif"].join(","),
           fontSize: 16,
         },
         h6: {
-          fontFamily: ["Inter", "sans-serif"].join(","),
+          fontFamily: ["Quicksand", "sans-serif"].join(","),
           fontSize: 14,
         },
       },

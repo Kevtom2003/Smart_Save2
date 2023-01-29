@@ -11,7 +11,7 @@ import expenseRoutes from "./routes/userData.js";
 
 
 // data imports
-import Expense from "./models/transactionData.js";
+import Expense from "../../models/transactionData.js";
 import {
   transactionData
 } from "./data/index.js";

@@ -1,5 +1,11 @@
-import React, { useContext } from 'react';
+import React, {useState, useContext} from 'react'
 import { GlobalContext } from '../context/GlobalState';
+import FlexBetween from "components/FlexBetween";
+import Header from "components/Header";
+import {
+    Box
+  } from "@mui/material";
+
 
 //Money formatter function
 function moneyFormatter(num) {
@@ -34,11 +40,19 @@ export const IncomeExpenses = () => {
   return (
     <div className="inc-exp-container">
         <div>
-          <h4>Income</h4>
+        <Box m="1.5rem 2.5rem">
+      <FlexBetween>
+      <Header title="" subtitle="Income" />
+      </FlexBetween>
+        </Box>
   <p className="money plus">{moneyFormatter(income)}</p>
         </div>
         <div>
-          <h4>Expense</h4>
+        <Box m="1.5rem 2.5rem">
+      <FlexBetween>
+        <Header title="" subtitle="Expense" />
+      </FlexBetween>
+        </Box>
   <p className="money minus">{moneyFormatter(expense)}</p>
         </div>
       </div>

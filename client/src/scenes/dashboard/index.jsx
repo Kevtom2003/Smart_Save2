@@ -154,8 +154,8 @@ const Dashboard = () => {
         <Box>
           <Button
             sx={{
-              backgroundColor: theme.palette.secondary.light,
-              color: theme.palette.background.alt,
+              backgroundColor: theme.palette.primary[900],
+              color: theme.palette.primary[500],
               fontSize: "14px",
               fontWeight: "bold",
               padding: "10px 20px",
