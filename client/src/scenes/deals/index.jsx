@@ -12,7 +12,7 @@ import Header from "components/Header";
   import BreakdownChart from "components/BreakdownChart";
   import OverviewChart from "components/OverviewChart";
   import { useGetDashboardQuery } from "state/api";
-  import StatBox from "components/StatBox";
+  import StatBox from "./StatBox";
   import {
     DownloadOutlined,
     Email,
