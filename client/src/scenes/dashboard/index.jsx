@@ -27,6 +27,35 @@ import { useGetDashboardQuery } from "state/api";
 import StatBox from "components/StatBox";
 
 const Dashboard = () => {
+  const [state2, setState2] = useState({
+    series: [44, 55, 13, 33],
+    options: {
+      labels: ['Food', 'School', 'Leisure', 'Tuition'],
+      chart: {
+        width: 380,
+        type: 'donut',
+      },
+      dataLabels: {
+        enabled: false
+      },
+      responsive: [{
+        breakpoint: 480,
+        options: {
+          chart: {
+            width: 200
+          },
+          legend: {
+            show: false
+          }
+        }
+      }],
+      legend: {
+        position: 'right',
+        offsetY: 0,
+        height: 230,
+      }
+    },
+  })
   const [state, setState] = useState({
     series: [{
       name: 'SPDR S&P 500 ETF Trust (SPY)',
@@ -248,10 +277,10 @@ const Dashboard = () => {
           p="1.5rem"
           borderRadius="0.55rem"
         >
+
           <Typography variant="h6" sx={{ color: theme.palette.secondary[100] }}>
             Expenses By Category
           </Typography>
-          <BreakdownChart isDashboard={true} />
           <Typography
             p="0 0.6rem"
             fontSize="0.8rem"
@@ -259,6 +288,9 @@ const Dashboard = () => {
           >
             Breakdown of your expenses by category to help you see where you are spending the most
           </Typography>
+            <div>
+            <ReactApexChart options={state2.options} series={state2.series} type="donut" width={330} />
+            </div>
         </Box>
       </Box>
     </Box>
