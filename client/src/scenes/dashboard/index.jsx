@@ -97,7 +97,11 @@ const Dashboard = () => {
         },
       },
       xaxis: {
-        type: 'datetime',
+        show: false,
+        labels: {
+          show: false
+        },
+        type: 'datetime'
       },
       tooltip: {
         shared: false,
@@ -114,7 +118,7 @@ const Dashboard = () => {
   const theme = useTheme();
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
   const { data, isLoading } = useGetDashboardQuery();
-
+  
   const columns = [
     {
       field: "_id",
@@ -207,7 +211,7 @@ const Dashboard = () => {
           p="1rem"
           borderRadius="0.55rem"
         >
-          <ReactApexChart options={state.options} series={state.series} type="line" height={350}/>
+          <ReactApexChart options={state.options} series={state.series} type="line" height={300}/>
         </Box>
         <StatBox
           title="Budget Satus"
@@ -264,7 +268,6 @@ const Dashboard = () => {
           
           <DataGrid
             loading={isLoading || !data}
-            getRowId={(row) => row._id}
             rows={(data && data.transactions) || []}
             columns={columns}
           />
@@ -287,9 +290,9 @@ const Dashboard = () => {
           >
             Breakdown of your expenses by category to help you see where you are spending the most
           </Typography>
-            <div>
+            <Box marginTop={5}>
             <ReactApexChart options={state2.options} series={state2.series} type="donut" width={330} />
-            </div>
+            </Box>
         </Box>
       </Box>
     </Box>
