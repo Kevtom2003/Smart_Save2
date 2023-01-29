@@ -43,7 +43,7 @@ const Analytics = () => {
           },
         },
         title: {
-          text: 'Smart Save Score'
+          text: 'Price'
         },
       },
       xaxis: {
