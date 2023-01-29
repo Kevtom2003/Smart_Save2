@@ -118,7 +118,7 @@ const Dashboard = () => {
       yaxis: {
         labels: {
           formatter: function (val) {
-            return (val / 1000000).toFixed(0);
+            return (val).toFixed(0);
           },
         },
         title: {
@@ -126,17 +126,14 @@ const Dashboard = () => {
         },
       },
       xaxis: {
-        show: false,
-        labels: {
-          show: false
-        },
+        
         type: 'datetime'
       },
       tooltip: {
         shared: false,
         y: {
           formatter: function (val) {
-            return (val / 1000000).toFixed(0)
+            return (val).toFixed(0)
           }
         }
       }

@@ -41,7 +41,7 @@ const Analytics = () => {
       yaxis: {
         labels: {
           formatter: function (val) {
-            return (val / 1000000).toFixed(0);
+            return (val).toFixed(0);
           },
         },
         title: {
@@ -50,16 +50,13 @@ const Analytics = () => {
       },
       xaxis: {
         show: false,
-        labels: {
-          show: false
-        },
         type: 'datetime'
       },
       tooltip: {
         shared: false,
         y: {
           formatter: function (val) {
-            return (val / 1000000).toFixed(0)
+            return (val).toFixed(0)
           }
         }
       }
@@ -99,7 +96,7 @@ const Analytics = () => {
         yaxis: {
           labels: {
             formatter: function (val) {
-              return (val / 1000000).toFixed(0);
+              return (val).toFixed(0);
             },
           },
           title: {
@@ -107,17 +104,13 @@ const Analytics = () => {
           },
         },
         xaxis: {
-          show: false,
-          labels: {
-            show: false
-          },
           type: 'datetime'
         },
         tooltip: {
           shared: false,
           y: {
             formatter: function (val) {
-              return (val / 1000000).toFixed(0)
+              return (val).toFixed(0)
             }
           }
         }
