@@ -31,15 +31,22 @@ import axios from "axios";
 // axios.defaults.proxy.port = "5001"
 
 const Dashboard = () => {
-  const [tabledata, setTableData] = useState()
+  const [tableData, setTableData] = useState()
 
+  // useEffect(() => {
+  //   // fetch('/transactions').then((data) => data.json()).then((data) => console.log(data)).catch((err) => console.log(err))
+  //   axios.get('http://localhost:5001/api')
+  //     .then((data) => setTableData(data))
+  // }, [])
+  // console.log(tableData)
   useEffect(() => {
-    // fetch('/transactions').then((data) => data.json()).then((data) => console.log(data)).catch((err) => console.log(err))
-    axios.get('http://localhost:5001/api').then(data => setTableData(data))
+    axios.get('http://localhost:5001/api')
+      .then(response => response.data)
+      .then(data => setTableData(data))
+      .catch(err => console.error(err))
   }, [])
-  console.log(tabledata)
 
-  
+
   const [state2, setState2] = useState({
     series: [44, 55, 13, 33],
     options: {
@@ -98,7 +105,7 @@ const Dashboard = () => {
         text: 'SPDR S&P 500 ETF Trust (SPY)',
         align: 'left'
       },
-      
+
       yaxis: {
         labels: {
           formatter: function (val) {
@@ -131,7 +138,7 @@ const Dashboard = () => {
   const theme = useTheme();
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
   const { data, isLoading } = useGetDashboardQuery();
-  
+
   const columns = [
     {
       field: "date",
@@ -155,12 +162,12 @@ const Dashboard = () => {
       sortable: false,
       renderCell: (params) => params.value.length,
     },
-    {
-      field: "cost",
-      headerName: "Cost",
-      flex: 1,
-      renderCell: (params) => `$${Number(params.value).toFixed(2)}`,
-    },
+    // {
+    //   field: "cost",
+    //   headerName: "Cost",
+    //   flex: 1,
+    //   renderCell: (params) => `$${Number(params.value).toFixed(2)}`,
+    // },
   ];
 
   return (
@@ -224,7 +231,7 @@ const Dashboard = () => {
           p="1rem"
           borderRadius="0.55rem"
         >
-          <ReactApexChart options={state.options} series={state.series} type="line" height={300}/>
+          <ReactApexChart options={state.options} series={state.series} type="line" height={300} />
         </Box>
         <StatBox
           title="Budget Satus"
@@ -278,17 +285,15 @@ const Dashboard = () => {
             },
           }}
         >
-          
+
           <DataGrid
             loading={isLoading || !data}
-<<<<<<< Updated upstream
-            rows={(data && data.transactions) || []}
-=======
-            getRowId={(row) => row._id}
-            rows={(tabledata) || []}
->>>>>>> Stashed changes
+            getRowId={row => row.date}
+            rows={tableData || []}
             columns={columns}
           />
+
+
         </Box>
         <Box
           gridColumn="span 4"
@@ -308,9 +313,9 @@ const Dashboard = () => {
           >
             Breakdown of your expenses by category to help you see where you are spending the most
           </Typography>
-            <Box marginTop={5}>
+          <Box marginTop={5}>
             <ReactApexChart options={state2.options} series={state2.series} type="donut" width={330} />
-            </Box>
+          </Box>
         </Box>
       </Box>
     </Box>
