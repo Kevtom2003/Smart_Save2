@@ -47,7 +47,11 @@ const Analytics = () => {
         },
       },
       xaxis: {
-        type: 'datetime',
+        show: false,
+        labels: {
+          show: false
+        },
+        type: 'datetime'
       },
       tooltip: {
         shared: false,
