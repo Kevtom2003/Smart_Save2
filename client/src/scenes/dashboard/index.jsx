@@ -43,15 +43,15 @@ const Dashboard = () => {
   
   
   const test_rows = [
-    { id: 1, date: 'Snow', title: 'Jon', category: 'Food', amount: 1 },
-    { id: 2, date: 'Lannister', title: 'Cersei', category: 'School', amount: 1 },
-    { id: 3, date: 'Lannister', title: 'Jaime', category: 'Leisure', amount: 1  },
-    { id: 4, date: 'Stark', title: 'Arya', category: 'Leisure', amount: 1  },
-    { id: 5, date: 'Targaryen', title: 'Daenerys', category: 'Food', amount: 1  },
-    { id: 6, date: 'Melisandre', title: null, category: 'Food', amount: 1  },
-    { id: 7, date: 'Clifford', title: 'Ferrara', category: 'Tuition', amount: 1  },
-    { id: 8, date: 'Frances', title: 'Rossini', category: 'Leisure', amount: 1  },
-    { id: 9, date: 'Roxie', title: 'Harvey', category: 'Food', amount: 1  },
+    { id: 1, date: 'Snow', title: 'Chipotle', category: 'Food', amount: 1, cost:11},
+    { id: 2, date: 'Lannister', title: 'TAMU', category: 'School', amount: 1, cost:197},
+    { id: 3, date: 'Lannister', title: 'Arcade', category: 'Leisure', amount: 1, cost: 30  },
+    { id: 4, date: 'Stark', title: 'Bowling', category: 'Leisure', amount: 1, cost:43  },
+    { id: 5, date: 'Targaryen', title: 'iHop', category: 'Food', amount: 1, cost:13  },
+    { id: 6, date: 'Melisandre', title: 'McDonalds', category: 'Food', amount: 1, cost:8 },
+    { id: 7, date: 'Clifford', title: 'TAMU', category: 'Tuition', amount: 1,cost:6872  },
+    { id: 8, date: 'Frances', title: 'V-Bucks', category: 'Leisure', amount: 1, cost:17  },
+    { id: 9, date: 'Roxie', title: 'McDonalds', category: 'Food', amount: 1,cost:15  },
   ];
   
 
