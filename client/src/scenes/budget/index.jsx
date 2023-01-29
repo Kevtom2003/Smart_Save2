@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactApexChart from "react-apexcharts";
 import { useState } from 'react';
-import { Button } from '@mui/material';
+import { Box } from '@mui/system';
 
 const Budget = () => {
     const [state, setState] = useState({
@@ -35,9 +35,9 @@ const Budget = () => {
     })
 
     return (
-      <div>
-        <ReactApexChart options={state.options} series={state.series} type="donut" width={330} />
-      </div>
+      <Box>
+        <ReactApexChart options={state.options} series={state.series} type="donut" width={400} />
+      </Box>
     );
 
 };
