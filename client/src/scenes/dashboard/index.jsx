@@ -1,6 +1,10 @@
 import React from "react";
 import FlexBetween from "components/FlexBetween";
 import Header from "components/Header";
+import ReactApexChart from "react-apexcharts";
+import dataVals from './data.js';
+import { useState } from 'react';
+
 import {
   DownloadOutlined,
   Email,
@@ -22,6 +26,61 @@ import { useGetDashboardQuery } from "state/api";
 import StatBox from "components/StatBox";
 
 const Dashboard = () => {
+  const [state, setState] = useState({
+    series: [{
+      name: 'SPDR S&P 500 ETF Trust (SPY)',
+      data: dataVals
+    }],
+    options: {
+      chart: {
+        type: 'area',
+        stacked: false,
+        height: 350,
+        zoom: {
+          type: 'x',
+          enabled: true,
+          autoScaleYaxis: true
+        },
+        toolbar: {
+          autoSelected: 'zoom'
+        }
+      },
+      dataLabels: {
+        enabled: false
+      },
+      markers: {
+        size: 0,
+      },
+      title: {
+        text: 'Stock Price Movement',
+        align: 'left'
+      },
+      
+      yaxis: {
+        labels: {
+          formatter: function (val) {
+            return (val / 1000000).toFixed(0);
+          },
+        },
+        title: {
+          text: 'Price'
+        },
+      },
+      xaxis: {
+        type: 'datetime',
+      },
+      tooltip: {
+        shared: false,
+        y: {
+          formatter: function (val) {
+            return (val / 1000000).toFixed(0)
+          }
+        }
+      }
+    },
+  })
+
+
   const theme = useTheme();
   const isNonMediumScreens = useMediaQuery("(min-width: 1200px)");
   const { data, isLoading } = useGetDashboardQuery();
@@ -118,7 +177,7 @@ const Dashboard = () => {
           p="1rem"
           borderRadius="0.55rem"
         >
-          <OverviewChart view="sales" isDashboard={true} />
+          <ReactApexChart options={state.options} series={state.series} type="line" height={350}/>
         </Box>
         <StatBox
           title="Monthly Sales"
@@ -173,6 +232,7 @@ const Dashboard = () => {
             },
           }}
         >
+          
           <DataGrid
             loading={isLoading || !data}
             getRowId={(row) => row._id}
