@@ -14,27 +14,10 @@ import getTransactions from "./controllers/userData.js";
 // import salesRoutes from "./routes/sales.js";
 
 // data imports
-<<<<<<< Updated upstream
 import Expense from "../../models/transactionData.js";
 import {
   transactionData
 } from "./data/index.js";
-=======
-// import User from "./models/User.js";
-// import Product from "./models/Product.js";
-// import ProductStat from "./models/ProductStat.js";
-// import Transaction from "./models/Transaction.js";
-// import OverallStat from "./models/OverallStat.js";
-// import AffiliateStat from "./models/AffiliateStat.js";
-// import {
-//   dataUser,
-//   dataProduct,
-//   dataProductStat,
-//   dataTransaction,
-//   dataOverallStat,
-//   dataAffiliateStat,
-// } from "./data/index.js";
->>>>>>> Stashed changes
 
 /* CONFIGURATION */
 const uri = "mongodb+srv://exampleuser:1qaz2wsxWSX@cluster0.rm3v0cj.mongodb.net/?retryWrites=true&w=majority"

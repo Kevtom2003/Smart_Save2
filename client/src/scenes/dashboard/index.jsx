@@ -281,12 +281,7 @@ const Dashboard = () => {
           
           <DataGrid
             loading={isLoading || !data}
-<<<<<<< Updated upstream
             rows={(data && data.transactions) || []}
-=======
-            getRowId={(row) => row._id}
-            rows={(tabledata) || []}
->>>>>>> Stashed changes
             columns={columns}
           />
         </Box>
